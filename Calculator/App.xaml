@@ -3,14 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Calculator"
              StartupUri="MainWindow.xaml">
+    
     <Application.Resources>
         <SolidColorBrush x:Key="numbersColour" Color="#444444" />
         <SolidColorBrush x:Key="operatorsColour" Color="DeepSkyBlue" />
         <SolidColorBrush x:Key="foregroundColour" Color="White" />
 
         <Style TargetType="Button">
-            <Setter Property="Foreground" Value="{StaticResource foregroundColour}"/>
+            <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="numberButtonStyle">            
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="{StaticResource numbersColour}"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="operatorButtonStyle" BasedOn="{StaticResource numberButtonStyle}">
+            <Setter Property="Background" Value="{StaticResource operatorsColour}"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="additionalButtonStyle" BasedOn="{StaticResource numberButtonStyle}">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="Foreground" Value="Black"/>
+            
         </Style>
 
         <Style TargetType="Label">
