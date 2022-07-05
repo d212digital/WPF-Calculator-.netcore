@@ -26,8 +26,7 @@
         <Label x:Name="resultLabel"
                Content="0"
                HorizontalAlignment="Right"
-               VerticalAlignment="Bottom"
-               FontSize="60"
+               VerticalAlignment="Bottom"               
                Grid.ColumnSpan="4"/>
         
         <Button x:Name="acButton" 
